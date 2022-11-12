@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 420px;
+    background-color: #c2c3c5c5;
+    border: 5px solid #810808;
+}
+.c1,.c2, .c3, .c4, .c5, .c6{
+    display: none;
+}
+.nums{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22%;
+    height: 100%;
+    margin: auto;
+}
+.nums div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 5%;
+    border: 2px solid #810808;
+    border-radius: 5px;
+    font-size:xx-large;
+    color: #810808;
+    font-weight: bolder;
+}
+.btns{
+    margin: 10px;
+}
+.btn{
+    width: 150px;
+    min-height: 45px;
+    height: auto;
+    font-size:xx-large;
+    border-radius: 5px;
+    border: 2px solid #810808;
+    color: #810808;
+}
+.btn:hover{
+    cursor: pointer;
+}
