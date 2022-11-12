@@ -30,12 +30,8 @@ body{
     background-color: #c2c3c5c5;
     border: 5px solid #810808;
 }
-.c1,.c2, .c3, .c4, .c5, .c6{
-    display: none;
-}
 .nums{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 22%;

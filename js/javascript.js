@@ -1,4 +1,24 @@
-let cartas = document.querySelectorAll(".carta");
+    let carta1 = [[1,3,5,7][9,11,13,15],[17,19,21,23],[25,27,29,31],[33,35,37,39],[41,43,45,47],[49,51,53,55],[57,59,61,63]];
+    let carta2 = [[2,3,6,7],[10,11,14,15],[18,19,22,23],[26,27,30,31],[34,35,38,39],[42,43,46,47],[50,51,54,55],[58,59,62,63]];
+    let carta3 = [[4,5,6,7],[12,13,14,15],[20,21,22,23],[28,29,30,31],[36,37,38,39],[44,45,46,47],[52,53,54,55],[60,61,62,63]];
+    let carta4 = [[8,9,10,11],[12,13,14,15],[24,25,26,27],[28,29,30,31],[40,41,42,43],[44,45,46,47],[56,57,58,59],[60,61,62,63]];
+    let carta5 = [[16,17,18,19],[20,21,22,23],[24,25,26,27],[28,29,30,31],[48,49,50,51],[52,53,54,55],[56,57,58,59],[60,61,62,63]];
+    let carta6 = [[32,33,34,35],[36,37,38,39],[40,41,42,43],[44,45,46,47],[48,49,50,51],[52,53,54,55],[56,57,58,59],[60,61,62,63]];
+
+function PreencherCarta(sequencia){
+    let carta = document.querySelector(".carta");
+    carta.innerHTML = "";
+    for(let i = 0; i < 8; i++){
+        carta.innerHTML += "<div class='nums'>";
+        for(let j = 0; j < 4; j++){
+            carta. innerHTML += `<div>${sequencia[i][j]}</div>`
+        }
+        carta.innerHTML += "</div>"
+    }
+}
+
+
+//let cartas = document.querySelectorAll(".carta");
 let btnNao = document.querySelector(".btnNao");
 let btnSim = document.querySelector(".btnSim");
 let cartasMostradas = [];
@@ -42,37 +62,32 @@ function Manipulacao(){//está função é responsavel pela logica do jogo;
         }
     }
 
-
     cartasMostradas.push(numCarta);//guarda as cartas que já foram exibidas para não se repetirem;
-    for(let i = 0;i<6;i++){//oculta todas as cartas;
-        cartas[i].style.display = "none";
-    }
-
 
     //atenção, a varíavel "num junto com soma" são o segrado desse jogo;
     switch(numCarta){//alternancia entre carta dependendo do numéro recebido (exibi a carta referente ao número);
         case 0:
-            cartas[0].style.display = "flex";
+            PreencherCarta(carta1);
             num = 1; 
             break;
         case 1:
-            cartas[1].style.display = "flex";
+            PreencherCarta(carta2);
             num = 2;
             break;
         case 2:
-            cartas[2].style.display = "flex";
+            PreencherCarta(carta3);
             num = 4;
             break;
         case 3:
-            cartas[3].style.display = "flex";
+            PreencherCarta(carta4);
             num = 8;
             break;
         case 4:
-            cartas[4].style.display = "flex";
+            PreencherCarta(carta5);
             num = 16;
             break;
         case 5:
-            cartas[5].style.display = "flex";
+            PreencherCarta(carta6);
             num = 32;
             break;
     }
