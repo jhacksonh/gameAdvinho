@@ -10,7 +10,7 @@ function inicio(){
     let opc = true;
     if(soma > 0){
         opc = confirm("Quer brincar outra vez?");
-        if(opc){
+        if(opc){//verifica se o jogador deseja jogar novamente;
             soma = 0;
             tem = false;
             cartasMostradas = [];
@@ -18,36 +18,42 @@ function inicio(){
             cartasMostradas.length = 7;
         }
     }
-    if(opc){
+    if(opc){//inicia o jogo;
         alert("Pense em um número de 1 a 63!\nClique em ok assim que pensar ");
         Manipulacao();
     }
 }
 
-function Manipulacao(){
-    if(tem){
+function Manipulacao(){//está função é responsavel pela logica do jogo;
+    if(tem){//verifica se o número pensado tem na carta;
         soma += num;
     }
-    let numCarta = Math.floor(Math.random() * 6);
+
+    let numCarta = Math.floor(Math.random() * 6);//variável que retorna um número aleatório referente que será apresentada;
     while(cartasMostradas.includes(numCarta)){
         numCarta = Math.floor(Math.random() * 6);
         if(cartasMostradas.length == 6){
             alert("Seu número é : "+soma);
         }
-        if(cartasMostradas.length >= 6){
+        if(cartasMostradas.length >= 6){ //esse if responsavel pelo reinicio do jogo;
             rtrn = true;
             numCarta = 0;
             break;
         }
     }
-    cartasMostradas.push(numCarta);
-    for(let i = 0;i<6;i++){
+
+
+    cartasMostradas.push(numCarta);//guarda as cartas que já foram exibidas para não se repetirem;
+    for(let i = 0;i<6;i++){//oculta todas as cartas;
         cartas[i].style.display = "none";
     }
-    switch(numCarta){
+
+
+    //atenção, a varíavel "num junto com soma" são o segrado desse jogo;
+    switch(numCarta){//alternancia entre carta dependendo do numéro recebido (exibi a carta referente ao número);
         case 0:
             cartas[0].style.display = "flex";
-            num = 1;
+            num = 1; 
             break;
         case 1:
             cartas[1].style.display = "flex";
@@ -70,11 +76,14 @@ function Manipulacao(){
             num = 32;
             break;
     }
-    if(rtrn){
+    if(rtrn){//retorna jogo ao inicio;
         rtrn = false;
         inicio();
     }
 }
+
+
+//botões de ação;
 btnNao.addEventListener("click", ()=>{
     tem = false;
     Manipulacao();
