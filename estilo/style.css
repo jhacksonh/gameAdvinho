@@ -11,7 +11,7 @@ body{
 }
 main{
     width: 100vw;
-    height: 85%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,7 +82,7 @@ main{
     padding: 5px;
     color: #fff;
     width: 100%;
-    height: 20%;
+    height: 15vh;
     background-color: #0005;
 }
 .redesSociais{
@@ -98,7 +98,7 @@ main{
     text-decoration: none;
     color: #fff;
     align-items: center;
-    
+
 }
 .redesSociais img{
     width: 30px;
