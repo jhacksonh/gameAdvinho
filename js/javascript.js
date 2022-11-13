@@ -37,7 +37,7 @@ function PreencherCarta(sequencia){
         nums = document.createElement("div");
         nums.classList.add("nums");
         for(let j = 0; j < 4; j++){
-            nums.innerHTML += `<div>${sequencia[i][j]}</div>`
+            nums.innerHTML += `<div><p>${sequencia[i][j]}</p></div>`
         }
         carta.appendChild(nums);
     }
