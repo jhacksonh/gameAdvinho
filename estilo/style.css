@@ -16,6 +16,7 @@ body{
 .titulo{
     margin-bottom: 20px;
     padding: 5px;
+    text-align: center;
     color: #fff;
     font-family: 'Times New Roman', Times, serif;
     background-color: #99f;
